@@ -1,13 +1,13 @@
-/* Styles for Navbar and Login Box */
+/* Styles for Navbar and Side Navbar */
 nav {
     position: fixed;
     top: 0;
-    background-color: rgb(66, 64, 64);
+    left: 0;
     width: 100%;
     height: 60px;
-    align-content: center;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border-bottom: 2px rgb(115, 76, 221) solid;
 }
 
@@ -22,6 +22,31 @@ nav .name {
     padding: 16px;
 }
 
+nav .sidenav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background-color: rgb(66, 64, 64);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 2px rgb(115, 76, 221) solid;
+}
+
+nav .sidenav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 16px;
+}
+
+nav .sidenav a:hover {
+    background-color: rgb(94, 62, 181);
+}
+
 .login-container {
     position: absolute;
     top: 50%;
@@ -30,6 +55,7 @@ nav .name {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 500px;
 }
 
 .login-form {
@@ -113,3 +139,94 @@ body {
 *::-webkit-scrollbar {
     display: none;
 }
+
+
+
+nav {
+    position: fixed;
+    top: 0;
+    background-color: rgb(66, 64, 64);
+    width: 100%;
+    height: 60px;
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px rgb(115, 76, 221) solid;
+}
+
+nav .name {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+    text-decoration: none;
+    font-size: 20px; 
+    color: rgb(156, 147, 156);
+    padding-left: 15px;
+    padding: 16px;
+}
+
+nav .sidenav {
+    position: fixed;
+    top: 60px; /* start at the end of the nav */
+    bottom: 50px; /* end at the begin of the footer */
+    left: 0;
+    width: 200px; /* make it bigger */
+    background-color: rgb(66, 64, 64);
+    padding: 20px;
+    border-right: 2px rgb(115, 76, 221) solid;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  nav .sidenav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: auto; /* move the list to the top */
+  }
+  
+  nav .sidenav li {
+    margin-bottom: 20px;
+  }
+  
+  nav .sidenav li:first-child {
+    margin-top: 0;
+  }
+  
+  nav .sidenav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  nav .sidenav a:hover {
+    background-color: rgb(94, 62, 181);
+  }
+
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav .sidenav {
+    position: fixed;
+    top: 60px; /* start at the end of the nav */
+    bottom: 50px; /* end at the begin of the footer */
+    left: 0;
+    width: 200px; /* make it bigger */
+    background-color: rgb(66, 64, 64);
+    padding: 20px;
+    border-right: 2px rgb(115, 76, 221) solid;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 110px); /* 60px (nav height) + 50px (footer height) */
+}
+
+
+/* other styles remain the same */
